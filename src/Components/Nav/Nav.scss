@@ -1,0 +1,31 @@
+@import '../../Global/Variable.scss';
+
+nav {
+    background-color: rgba(0, 0, 0, 0.95);
+    height: 44px;
+
+    a.navLink , button.navBtn{
+        color: $text;
+        font-size: 12px;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            color: $light;
+        }
+    }
+    button.navBtn{
+        font-size: 18px;
+    }
+    .nav{
+        height: inherit;
+    }
+}
+
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    nav {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.788);  
+    }
+  }
