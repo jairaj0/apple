@@ -21,7 +21,7 @@ const Nav = () => {
 
   return (
     <nav>
-        <div className="nav container flex-between">
+        <div className="container flex-between">
           <button className="logo">
             <img src={logo} width="20px" alt={logo} />
           </button>
@@ -34,7 +34,7 @@ const Nav = () => {
               />
             ))
           }
-          <button className='navBtn'><HiOutlineSearch /></button>
+          <button className='navBtn search'><HiOutlineSearch /></button>
           <button className='navBtn'><BsBag /></button>
         </div>
     </nav>

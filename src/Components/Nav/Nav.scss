@@ -16,9 +16,6 @@ nav {
     button.navBtn{
         font-size: 18px;
     }
-    .nav{
-        height: inherit;
-    }
 }
 
 
@@ -28,4 +25,13 @@ nav {
       backdrop-filter: blur(10px);
       background-color: rgba(0, 0, 0, 0.788);  
     }
+  }
+
+
+  @media only screen and (max-width: 835px) {
+      nav {
+        button.search,.navLink{
+          display: none;
+        }
+      }
   }

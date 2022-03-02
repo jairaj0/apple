@@ -1,5 +1,82 @@
 @import '../../Global/Variable.scss';
 
-.header{
+.header {
     background: $bg1;
+    color: $light;
+    height: 70px;
+
+    p {
+        font-size: 12px;
+        width: 46%;
+    }
+
+    .rightHeader {
+        width: 50%;
+
+        .drobBox {
+            border: .5px solid $text;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            width: 70%;
+
+            div {
+                color: $light;
+                font-weight: 400;
+            }
+
+            h4 {
+                margin-left: 1rem;
+            }
+        }
+
+        button.continue {
+            background: $bg2;
+            width: 120px;
+            height: 40px;
+            font-size: 18px;
+            color: $light;
+            border-radius: .5rem;
+            margin: 0 1rem;
+        }
+
+        button.close {
+            font-size: 25px;
+            font-weight: 100;
+            color: $text;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $light;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    .header {
+        height: 135px;
+
+        .header_c {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+
+            p,
+            .rightHeader {
+                width: 100%;
+            }
+
+            .rightHeader {
+                .drobBox {
+                    width: 50%;
+                }
+
+                button.close {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }
+            }
+        }
+    }
 }
