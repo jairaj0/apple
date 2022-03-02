@@ -1,11 +1,13 @@
-import React from 'react';
-import logo from '../../Assets/apple.svg';
+import React,{ useState } from 'react';
 import NavLink from '../NavLink/NavLink';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { BsBag } from 'react-icons/bs';
+import { BsBag , BsApple } from 'react-icons/bs';
 import './Nav.scss';
+import Menu from '../Menu/Menu';
 
 const Nav = () => {
+  const [menuSate, setMenuSate] = useState(false)
+
   const navLinks = [
     {text : "Store" , path : "/"},
     {text : "Mac" , path : "/"},
@@ -18,12 +20,20 @@ const Nav = () => {
     {text : "Accessories" , path : "/"},
     {text : "Support" , path : "/"},
     ]
+  
+    const menuBarFunc = () => {
+      menuSate ? setMenuSate(false) : setMenuSate(true);
+    }
 
   return (
     <nav>
         <div className="container flex-between">
+        <button onClick={menuBarFunc} className="menuBtn flex-center">
+          <Menu menuState={menuSate} />
+        </button>
+
           <button className="logo">
-            <img src={logo} width="20px" alt={logo} />
+            <BsApple  />
           </button>
           {
             navLinks.map((value , index)=>(

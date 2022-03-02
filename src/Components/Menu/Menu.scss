@@ -1,0 +1,42 @@
+@import '../../Global/Variable.scss';
+
+.menu{
+    .line{
+        width: 15px;
+        height: .5px;
+        background-color: $light;
+        transition: all .3s ease-in-out;
+
+        &:first-child{
+            margin-bottom: .5rem;
+        }
+        &:nth-child(2){
+            margin-top: .5rem;
+        }
+    }
+}
+
+.line1{
+    margin-bottom: 0 !important;
+    transform: rotate(30deg);
+    transform-origin: 40%;
+    
+}
+
+.line2{
+    margin-top: 0 !important;
+    transform: rotate(-30deg);
+    transform-origin: center;
+}
+
+.menuBg{
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    background-color: $dark;
+    width: 100%;
+    height: calc( 100vh - 44px );
+    transition: all .3s ease-in-out;
+}
+
+
